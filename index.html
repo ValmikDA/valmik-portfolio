@@ -1,71 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valmik Varandani | Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #0f172a;
-            color: #e2e8f0;
-        }
-        header {
-            text-align: center;
-            padding: 40px;
-        }
-        h1 {
-            font-size: 2.5rem;
-        }
-        .section {
-            padding: 30px;
-            max-width: 900px;
-            margin: auto;
-        }
-        .card {
-            background: #1e293b;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
-        }
-        a {
-            color: #38bdf8;
-            text-decoration: none;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valmik Varandani | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.subtitle {
+    color: #94a3b8;
+}
+
+.section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: #334155;
+}
+
+button {
+    background: #38bdf8;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+    margin-top: 10px;
+    color: #cbd5f5;
+}
+
+img {
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+</style>
 </head>
+
 <body>
 
 <header>
     <h1>Valmik Varandani</h1>
-    <p>Product Marketing & Data Analytics Portfolio</p>
+    <p class="subtitle">Product Marketing | Data Analytics | Growth</p>
 </header>
 
 <div class="section">
     <h2>🚀 About Me</h2>
     <p>
-        Business Analytics graduate with experience in marketing analytics, customer segmentation, and data-driven decision making.
-        Skilled in SQL, Tableau, Python, and Excel.
+        MSc Business Analytics graduate with strong experience in marketing analytics, 
+        customer segmentation, and data-driven decision making. Skilled in SQL, Tableau, Python, and Alteryx.
     </p>
 </div>
 
 <div class="section">
     <h2>📊 Projects</h2>
 
-    <div class="card">
-        <h3>HR Attrition Dashboard</h3>
-        <p>Analyzed employee attrition using Tableau dashboards and KPI tracking.</p>
-    </div>
+    <div class="projects">
 
-    <div class="card">
-        <h3>Customer Segmentation (RFM)</h3>
-        <p>Used clustering and RFM analysis to identify high-value customers.</p>
-    </div>
+        <!-- HR PROJECT -->
+        <div class="card">
+            <h3>HR Attrition Dashboard</h3>
+            <p>Analyzing employee retention to improve engagement and reduce attrition</p>
 
-    <div class="card">
-        <h3>Sales Prediction (Machine Learning)</h3>
-        <p>Built predictive models to identify high-conversion customers.</p>
+            <img src="images/hr.png" width="100%">
+
+            <button onclick="toggle('p1')">View Insights</button>
+            <p id="p1" class="hidden">
+            • Identified key drivers: salary, job satisfaction, career growth  
+            • High churn in early-stage employees → onboarding improvement opportunity  
+            • Suggested engagement strategies to improve retention  
+            • Built KPI dashboard for tracking workforce stability  
+            </p>
+        </div>
+
+        <!-- SEGMENTATION PROJECT -->
+        <div class="card">
+            <h3>Customer Segmentation</h3>
+            <p>Customer segmentation to enable targeted marketing and improve retention</p>
+
+            <img src="images/segmentation.png" width="100%">
+
+            <button onclick="toggle('p2')">View Insights</button>
+            <p id="p2" class="hidden">
+            • Top 20% customers drive majority of revenue (high-value segment)  
+            • Drop-off in low-frequency users → retention campaign opportunity  
+            • High return-rate segment → product improvement needed  
+            • Recommended lifecycle campaigns to increase LTV  
+            </p>
+        </div>
+
+        <!-- ML PROJECT -->
+        <div class="card">
+            <h3>Sales Prediction ML</h3>
+            <p>Predicting high-conversion customers to improve marketing ROI</p>
+
+            <img src="images/ml.png" width="100%">
+
+            <button onclick="toggle('p3')">View Insights</button>
+            <p id="p3" class="hidden">
+            • Built ML models to predict customer conversions  
+            • Gradient Boosting achieved best performance (highest ROC-AUC)  
+            • Identified key purchase drivers  
+            • Enables targeted campaigns for higher conversion rates  
+            </p>
+        </div>
+
     </div>
 </div>
 
@@ -73,7 +154,19 @@
     <h2>📫 Contact</h2>
     <p>Email: varandanivalmik@gmail.com</p>
     <p>Phone: +91 9828383894</p>
+    <p><a href="https://github.com/yourusername" target="_blank">GitHub Profile</a></p>
 </div>
+
+<script>
+function toggle(id) {
+    var x = document.getElementById(id);
+    if (x.style.display === "none" || x.style.display === "") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
 
 </body>
 </html>
