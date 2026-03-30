@@ -2,78 +2,69 @@
 <html>
 <head>
 <title>Customer Segmentation</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
 <style>
-body {
-    font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #0f172a, #020617);
-    color: #e2e8f0;
-    padding: 20px;
-}
-
-.container {
-    max-width: 900px;
-    margin: auto;
-}
-
-.card {
-    background: rgba(30, 41, 59, 0.6);
-    padding: 20px;
-    border-radius: 16px;
-    margin-top: 20px;
-}
-
-button {
-    background: #38bdf8;
-    border: none;
-    padding: 10px;
-    border-radius: 8px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-.hidden { display: none; }
-
-img {
-    width: 100%;
-    margin-top: 15px;
-    border-radius: 10px;
-}
-
-a { color: #38bdf8; }
+body {background:#0f172a;color:white;font-family:Inter;padding:20px;}
+.container{max-width:900px;margin:auto;}
+.card{background:#1e293b;padding:20px;margin-top:20px;border-radius:10px;}
+img{width:100%;margin-top:10px;border-radius:10px;}
+.hidden{display:none;}
+button{margin-top:10px;}
+a{color:#38bdf8;}
 </style>
 </head>
 
 <body>
-
 <div class="container">
 
-<a href="index.html">← Back to Home</a>
+<a href="index.html">← Back</a>
 
 <h1>🧩 Customer Segmentation Case Study</h1>
 
 <div class="card">
 <h2>📌 Problem</h2>
-<p>Business lacked visibility into high-value customers and retention opportunities.</p>
+<p>
+Businesses often lack visibility into customer value, leading to inefficient marketing spend 
+and poor targeting. The goal was to identify high-value customers and improve retention strategies.
+</p>
+</div>
+
+<div class="card">
+<h2>📊 Data Overview</h2>
+<ul>
+<li>Customer ID</li>
+<li>Purchase Frequency</li>
+<li>Recency (last purchase)</li>
+<li>Monetary Value (spend)</li>
+<li>Return behavior</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>🎯 Objective</h2>
+<p>Segment customers based on behavior to improve targeting, retention, and lifecycle marketing.</p>
 </div>
 
 <div class="card">
 <h2>🔍 Approach</h2>
-<p>Used K-means clustering and RFM analysis to segment customers.</p>
+<ul>
+<li>Data cleaning and preprocessing</li>
+<li>RFM analysis (Recency, Frequency, Monetary)</li>
+<li>K-means clustering (optimal clusters = 4)</li>
+<li>Segment profiling and interpretation</li>
+</ul>
 </div>
 
 <div class="card">
 <h2>📊 Dashboard Walkthrough</h2>
 
-<button onclick="toggle('img1')">View Segmentation Chart</button>
+<button onclick="toggle('img1')">Segmentation View</button>
 <div id="img1" class="hidden">
-    <img src="images/seg1.png">
+<img src="images/seg1.png">
 </div>
 
-<button onclick="toggle('img2')">View RFM Analysis</button>
+<button onclick="toggle('img2')">RFM Analysis</button>
 <div id="img2" class="hidden">
-    <img src="images/seg2.png">
+<img src="images/seg2.png">
 </div>
 
 </div>
@@ -81,16 +72,19 @@ a { color: #38bdf8; }
 <div class="card">
 <h2>📈 Insights</h2>
 <ul>
-<li>Top 20% customers drive majority revenue</li>
-<li>Low-frequency users show churn risk</li>
-<li>Opportunity for retention campaigns</li>
-<li>High return-rate customers need product improvement</li>
+<li>Top 20% customers contribute majority revenue</li>
+<li>Low-frequency users show high churn risk</li>
+<li>High return-rate customers indicate dissatisfaction</li>
+<li>Clear segmentation enables personalized campaigns</li>
 </ul>
 </div>
 
 <div class="card">
-<h2>💡 Impact</h2>
-<p>Enabled targeted marketing and improved customer retention strategies.</p>
+<h2>💡 Business Impact</h2>
+<p>
+Improved targeting, increased retention opportunities, and optimized marketing ROI 
+through lifecycle-based segmentation.
+</p>
 </div>
 
 </div>
