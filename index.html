@@ -17,7 +17,29 @@ header {
     padding: 60px 20px;
 }
 
-h1 { font-size: 2.8rem; }
+.profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #38bdf8;
+}
+
+h1 { 
+    font-size: 2.5rem; 
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #94a3b8;
+    margin-bottom: 15px;
+}
+
+.contact {
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
 
 .container {
     max-width: 900px;
@@ -42,17 +64,44 @@ a {
     color: #38bdf8;
     text-decoration: none;
 }
+
+a:hover {
+    text-decoration: underline;
+}
 </style>
 </head>
 
 <body>
 
 <header>
+
+    <!-- PROFILE IMAGE -->
+    <img src="images/profile.jpg" class="profile-img">
+
     <h1>Valmik Varandani</h1>
-    <p>Product Marketing | Data Analytics | Growth</p>
+    <p class="subtitle">Product Marketing | Data Analytics | Growth</p>
+
+    <!-- CONTACT DETAILS -->
+    <div class="contact">
+        📍 Bangalore, India <br>
+        📧 varandanivalmik@gmail.com <br>
+        📞 +91 9828383894 <br>
+        🔗 <a href="https://www.linkedin.com/in/valmik11" target="_blank">LinkedIn Profile</a>
+    </div>
+
 </header>
 
 <div class="container">
+
+<h2>🚀 About Me</h2>
+<div class="card">
+<p>
+I am a Business Analytics graduate with a strong interest in product marketing, growth, and user engagement. 
+I have academic background in customer segmentation, campaign analysis, and data-driven decision making using tools like SQL, Tableau, and Alteryx.
+
+I enjoy translating data into actionable insights to improve user retention, conversion, and overall product performance.
+</p>
+</div>
 
 <h2>📊 Projects</h2>
 
