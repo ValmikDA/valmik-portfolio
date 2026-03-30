@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HR Analytics</title>
+<style>
+body {font-family: Arial; background:#0f172a; color:white; padding:20px;}
+img {width:100%; margin-top:10px; border-radius:10px;}
+button {margin-top:10px; padding:10px;}
+.hidden {display:none;}
+a {color:#38bdf8;}
+</style>
+</head>
+
+<body>
+
+<a href="index.html">← Back to Home</a>
+
+<h1>📊 HR Attrition Case Study</h1>
+
+<h2>📌 Problem</h2>
+<p>High employee attrition affecting business stability.</p>
+
+<h2>🔍 Approach</h2>
+<p>Analyzed HR data using Tableau dashboards and KPI tracking.</p>
+
+<h2>📊 Dashboard Visuals</h2>
+
+<button onclick="toggle('hr1')">View Attrition Dashboard</button>
+<div id="hr1" class="hidden">
+    <img src="images/hr1.png">
+</div>
+
+<button onclick="toggle('hr2')">View Insights Dashboard</button>
+<div id="hr2" class="hidden">
+    <img src="images/hr2.png">
+</div>
+
+<h2>📈 Key Insights</h2>
+<ul>
+<li>Attrition driven by low salary and job dissatisfaction</li>
+<li>Higher churn in early-stage employees</li>
+<li>Low engagement correlates with high attrition</li>
+<li>Retention strategies needed for junior workforce</li>
+</ul>
+
+<h2>💡 Business Impact</h2>
+<p>Improved employee retention strategies and workforce planning.</p>
+
+<script>
+function toggle(id){
+ let x=document.getElementById(id);
+ x.style.display = x.style.display==="block" ? "none":"block";
+}
+</script>
+
+</body>
+</html>
