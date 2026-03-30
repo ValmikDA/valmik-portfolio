@@ -2,30 +2,72 @@
 <html>
 <head>
 <title>Valmik Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
-body {font-family: Arial; background:#0f172a; color:white; text-align:center;}
-.card {background:#1e293b; margin:20px auto; padding:20px; width:300px; border-radius:10px;}
-a {color:#38bdf8; text-decoration:none;}
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: #e2e8f0;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+h1 { font-size: 2.8rem; }
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(30, 41, 59, 0.6);
+    padding: 20px;
+    border-radius: 16px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: rgba(51, 65, 85, 0.8);
+}
+
+a {
+    color: #38bdf8;
+    text-decoration: none;
+}
 </style>
 </head>
 
 <body>
 
-<h1>Valmik Varandani</h1>
-<p>Product Marketing | Data Analytics</p>
+<header>
+    <h1>Valmik Varandani</h1>
+    <p>Product Marketing | Data Analytics | Growth</p>
+</header>
+
+<div class="container">
 
 <h2>📊 Projects</h2>
 
 <div class="card">
-    <h3>Customer Segmentation</h3>
-    <p>Lifecycle marketing & customer targeting</p>
+    <h3>🧩 Customer Segmentation</h3>
+    <p>Lifecycle marketing, customer targeting & retention strategy</p>
     <a href="segmentation.html">View Case Study →</a>
 </div>
 
 <div class="card">
-    <h3>HR Analytics</h3>
-    <p>Attrition analysis & retention strategy</p>
+    <h3>📊 HR Analytics</h3>
+    <p>Attrition analysis & employee retention insights</p>
     <a href="hr.html">View Case Study →</a>
+</div>
+
 </div>
 
 </body>
