@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Customer Segmentation</title>
+<style>
+body {font-family: Arial; background:#0f172a; color:white; padding:20px;}
+img {width:100%; margin-top:10px; border-radius:10px;}
+button {margin-top:10px; padding:10px;}
+.hidden {display:none;}
+a {color:#38bdf8;}
+</style>
+</head>
+
+<body>
+
+<a href="index.html">← Back to Home</a>
+
+<h1>🧩 Customer Segmentation Case Study</h1>
+
+<h2>📌 Problem</h2>
+<p>Business lacked visibility into high-value customers and retention opportunities.</p>
+
+<h2>🔍 Approach</h2>
+<p>Used clustering (K-means) + RFM analysis to segment customers.</p>
+
+<h2>📊 Dashboard Visuals</h2>
+
+<button onclick="toggle('img1')">View Segmentation Chart</button>
+<div id="img1" class="hidden">
+    <img src="images/seg1.png">
+</div>
+
+<button onclick="toggle('img2')">View RFM Analysis</button>
+<div id="img2" class="hidden">
+    <img src="images/seg2.png">
+</div>
+
+<h2>📈 Key Insights</h2>
+<ul>
+<li>Top 20% customers drive majority of revenue</li>
+<li>Low-frequency users show high churn risk</li>
+<li>High return-rate segment needs product improvement</li>
+<li>Opportunity for lifecycle campaigns to increase LTV</li>
+</ul>
+
+<h2>💡 Business Impact</h2>
+<p>Enabled targeted campaigns, improved retention strategy, and optimized marketing spend.</p>
+
+<script>
+function toggle(id){
+ let x=document.getElementById(id);
+ x.style.display = x.style.display==="block" ? "none":"block";
+}
+</script>
+
+</body>
+</html>
